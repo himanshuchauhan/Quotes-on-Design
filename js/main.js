@@ -48,7 +48,7 @@ $('#change').on('click', function(e) {
 (function() {
     var triggerLoading = [].slice.call(document.querySelectorAll('.pageload-link')),
         loader = new SVGLoader(document.getElementById('loader'), {
-            speedIn: 900,
+            speedIn: 400,
             easingIn: mina.easeinout
         });
 
