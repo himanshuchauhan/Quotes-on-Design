@@ -1,0 +1,214 @@
+body {
+    height: 700px;
+    width: 1300px;
+    margin: auto;
+}
+.blue-box {
+    width: 1000px;
+    height: 400px;
+    background: #00C0BE;
+    margin-top: 50px;
+    margin-right: 70px;
+    float: right;
+    box-shadow: 2px 2px 20px 0px rgba(0, 0, 0, 0.50);
+}
+.quote-box {
+
+    background-color: #fefefe;
+    box-shadow: 0px 0px 80px 0px rgba(0, 0, 0, 0.50);
+    width: 700px;
+    height: 300px;
+    position: absolute;
+    margin-left: 70px;
+    margin-top: 100px;
+
+}
+.overflow{
+	font-size: 5px;
+/* 	overflow: scroll; */
+}
+.quote {
+    font-family: Helvetica-light;
+    font-size: 25px;
+    color: #00c0be;
+    width: 600px;
+
+    margin: auto;
+    margin-top: 40px;
+
+
+
+
+}
+h1 {
+    /* Quotes On Design: */
+    font-family: Athelas-Regular;
+    font-size: 110px;
+    color: #FCEF48;
+
+    margin-bottom: -10px;
+    margin-top: 20px;
+    margin-left: 200px;
+
+}
+
+.author{
+font-family: Helvetica-Bold;
+font-size: 18.08px;
+color: #c7c6b3;
+line-height: 22px;
+text-align: right;
+margin-right: 50px;
+}
+#quote-source{
+    /* — BRIAN WEBB : */
+font-family: Helvetica-LightOblique;
+font-size: 16.07px;
+color: #bbcfd0;
+line-height: 22px;
+margin-left: 50px;
+}
+#quote-source a{
+    color: #b8f4f4;
+    text-decoration: none;
+}
+
+
+/* General button style (reset) */
+
+.btn {
+    z-index: 1;
+    float: right;
+    border: none;
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background: none;
+    cursor: pointer;
+    padding: 25px 80px;
+    display: inline-block;
+    margin:93px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    outline: none;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+}
+.btn-1 {
+    border: 3px solid #fff;
+    color: #fff;
+    overflow: hidden;
+    margin-top: 100px;
+}
+.btn-1:after {
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    background: #fff;
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -moz-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+}
+.btn-1:hover, .btn-1:active {
+    color: #00C0BE;
+}
+.btn-1:hover:after {
+    height: 260%;
+    opacity: 1;
+}
+.btn-1:active:after {
+    height: 400%;
+    opacity: 1;
+}
+
+/*overlay*/
+
+.pageload-overlay {
+    position: absolute;
+    width: 700px;
+    height: 300px;
+    margin-left: 70px;
+    margin-top: 100px;
+    visibility: hidden;
+}
+.pageload-overlay.show {
+    visibility: visible;
+}
+.pageload-overlay svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+.pageload-overlay svg path {
+    fill: #00c0be;
+}
+.pageload-overlay::after, .pageload-overlay::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 50%;
+    margin: -10px 0 0 -10px;
+    border-radius: 50%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1000;
+    -webkit-transition: opacity 0.15s, visibility 0s 0.15s;
+    transition: opacity 0.15s, visibility 0s 0.15s;
+}
+.pageload-overlay::after {
+    background: #fcef48;
+    -webkit-transform: translateX(-20px);
+    transform: translateX(-20px);
+    -webkit-animation: moveRight 0.6s linear infinite alternate;
+    animation: moveRight 0.6s linear infinite alternate;
+}
+.pageload-overlay::before {
+    background: #fefefe;
+    -webkit-transform: translateX(20px);
+    transform: translateX(20px);
+    -webkit-animation: moveLeft 0.6s linear infinite alternate;
+    animation: moveLeft 0.6s linear infinite alternate;
+}
+@-webkit-keyframes moveRight {
+    to {
+        -webkit-transform: translateX(20px);
+    }
+}
+@keyframes moveRight {
+    to {
+        transform: translateX(20px);
+    }
+}
+@-webkit-keyframes moveLeft {
+    to {
+        -webkit-transform: translateX(-20px);
+    }
+}
+@keyframes moveLeft {
+    to {
+        transform: translateX(-20px);
+    }
+}
+.pageload-loading.pageload-overlay::after, .pageload-loading.pageload-overlay::before {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transition: opacity 0.3s;
+    transition: opacity 0.3s;
+}
