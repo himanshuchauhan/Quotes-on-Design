@@ -1,8 +1,12 @@
 body {
-    height: 700px;
+    height: 95vh;
     width: 1300px;
     margin: auto;
+    font-size: 10px;
+
 }
+
+
 .blue-box {
     width: 1000px;
     height: 400px;
@@ -23,13 +27,10 @@ body {
     margin-top: 100px;
 
 }
-.overflow{
-	font-size: 5px;
-/* 	overflow: scroll; */
-}
+
 .quote {
     font-family: Helvetica-light;
-    font-size: 25px;
+    font-size: 2.5em;
     color: #00c0be;
     width: 600px;
 
@@ -43,8 +44,8 @@ body {
 h1 {
     /* Quotes On Design: */
     font-family: Athelas-Regular;
-    font-size: 110px;
-    color: #FCEF48;
+    font-size: 11em;
+    color: #49e7a9;
 
     margin-bottom: -10px;
     margin-top: 20px;
@@ -54,16 +55,16 @@ h1 {
 
 .author{
 font-family: Helvetica-Bold;
-font-size: 18.08px;
+font-size: 1.8em;
 color: #c7c6b3;
-line-height: 22px;
+line-height: 2.2em;
 text-align: right;
 margin-right: 50px;
 }
 #quote-source{
-    /* — BRIAN WEBB : */
+
 font-family: Helvetica-LightOblique;
-font-size: 16.07px;
+font-size: 1.6em;
 color: #bbcfd0;
 line-height: 22px;
 margin-left: 50px;
@@ -77,11 +78,12 @@ margin-left: 50px;
 /* General button style (reset) */
 
 .btn {
+
     z-index: 1;
     float: right;
     border: none;
     font-family: inherit;
-    font-size: inherit;
+    font-size: 1.6em;
     color: inherit;
     background: none;
     cursor: pointer;
@@ -211,4 +213,24 @@ margin-left: 50px;
     visibility: visible;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
+}
+#buttons{
+float: right;
+width: 470px;
+}
+#tweet{
+    margin-top: -35px;
+    padding: 25px 91px;
+}
+footer{
+    width: 550px;
+    margin: auto;
+
+    margin-top: 470px;
+    font-size: 1.6em;
+}
+
+li{
+    display: inline;
+
 }
