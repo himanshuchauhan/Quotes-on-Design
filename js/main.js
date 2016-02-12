@@ -3,9 +3,10 @@ $('#change').on('click', function(e) {
     e.preventDefault();
     $.ajax({
         url: 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-        timeout:2000,
+        timeout: 3000,
         success: function(data) {
             var post = data.shift(); // The data is an array of posts. Grab the first one.
+
             //add the quote to the page.
             $('.author').html("-" + post.title);
             $('.quote').html(post.content);
@@ -32,12 +33,16 @@ $('#change').on('click', function(e) {
                 $('#quote-source').hide();
             };
 
+            // to set the content for the tweet.
+            quote = $(".quote").text();
+            author = $(".author").text();
+
         },
         error: function(data) {
             $('.quote').html("You Got an ERROR. Hit that Awesome Button Again.");
             $('.author').html("-Himanshu Chauhan");
         },
-        cache:false,
+        cache: false,
 
 
     });
@@ -48,7 +53,7 @@ $('#change').on('click', function(e) {
 (function() {
     var triggerLoading = [].slice.call(document.querySelectorAll('.pageload-link')),
         loader = new SVGLoader(document.getElementById('loader'), {
-            speedIn: 400,
+            speedIn: 500,
             easingIn: mina.easeinout
         });
 
@@ -67,3 +72,12 @@ $('#change').on('click', function(e) {
 
     init();
 })();
+
+// tweet Button
+$(document).ready(function() {
+    $("#tweet").on("click", function() {
+        var myUrl = "https://twitter.com/intent/tweet?text=" + quote + " " + author + ".  " + "from @himanshuholik";
+        window.open(myUrl, 'twitter');
+        return false;
+    });
+});

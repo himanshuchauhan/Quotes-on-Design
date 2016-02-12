@@ -1,5 +1,5 @@
 body {
-    height: 700px;
+    height: 95vh;
     width: 1300px;
     margin: auto;
 }
@@ -211,4 +211,24 @@ margin-left: 50px;
     visibility: visible;
     -webkit-transition: opacity 0.3s;
     transition: opacity 0.3s;
+}
+#buttons{
+float: right;
+width: 470px;
+}
+#tweet{
+    margin-top: 0px;
+}
+footer{
+    width: 550px;
+    margin: auto;
+
+    margin-top: 470px;
+
+
+}
+
+li{
+    display: inline;
+
 }
